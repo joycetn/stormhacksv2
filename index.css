@@ -1,0 +1,19 @@
+body {
+    /*font-family: Impact, sans-serif; */
+    font-size: 1rem;
+    padding: 2rem;
+    background-color: #ffffff;  /* #white */
+  }
+
+.enter {
+     /*font-family: Impact, sans-serif; */
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.enter:hover {
+    color: #4d4649; /* #dark grey */
+    background-color: #aeaeae;  /* #light grey */
+    transition-property: background-color, color;
+    transition-duration: 0.5s;
+}
