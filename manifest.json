@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "Hello Extensions",
-    "description": "Base Level Extension",
+    "name": "Distraction Demon",
+    "description": "A chrome extension that scares the shit out of you occasionally in order to make sure you are on task.",
     "version": "1.0",
     "action": {
       "default_popup": "index.html",
