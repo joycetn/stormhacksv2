@@ -8,12 +8,13 @@ body {
     justify-content: center; /* Center elements vertically */
     margin: 0; /* Remove default margin */
     font-family: 'Inter'; /* Most basic font */
-    font-size: 1rem; /* Base font size */
-    padding: 3rem; /* Padding around the body */
+    font-size: 0.8em; /* Base font size */
+    padding: 40px 40px; /* Padding around the body */
     color: #E8E8E8;  /* Default text color */
     background-color: #1B1B23;  /* Default background color (light grey) */
-    width: 30rem; /* Fixed width for the body */
+    width: 350px; /* Fixed width for the body */
     transition: background-color 1s ease, color 0.5s ease; /* Smooth transitions for dark mode */
+    border: 2px solid pink; /* Temporary border for troubleshooting */
 }
 
 /* ==============================
@@ -37,6 +38,8 @@ body {
 h1 {
     font-family: 'Major Mono Display'; /* Stylized font */
     text-align: center;
+    /* border: 2px solid rgb(83, 145, 103); /* Temporary border for troubleshooting */
+    letter-spacing: 1.4px; /* Adjust the value as needed */
     color: #E8E8E8;
 }
 
