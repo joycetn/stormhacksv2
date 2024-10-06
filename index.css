@@ -256,3 +256,47 @@ input:checked + .slider:before {
     border-radius: 50%; /* Round edges for the slider circle */
 }
 
+/* ==============================
+   Tooltip Stuff
+================================== */
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px; /* Limit the maximum width of the tooltip */
+    background-color: #555; /* Background color */
+    color: #fff;
+    text-align: left; /* Align text to the left */
+    border-radius: 5px;
+    padding: 8px; /* Padding for spacing */
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none; /* Prevent mouse events */
+    white-space: normal; /* Allow wrapping */
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Position the arrow below the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent; /* Color of the arrow */
+}
+
+/* Show the tooltip text when hovering */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}

@@ -24,39 +24,42 @@
         pact with me to summon your focus back...</p>
 
     <!-- Rounded switch -->
-    <div class="parent-container" >
+    <div class="parent-container">
 
         <div class="column">
             <div class="slider-header">
                 <p>Length of Curse</p>
+                
                 <p id="rangeValue" class="range-display">01h 00m</p> <!-- Display time on the same line -->
             </div>
-            <div class="column-2">
-                <div class="slider-container">
-                    <input type="range" min="0" max="730" step="1" value="15" class="duration" id="myRange">  <!--temp change to every 1min for testing-->
-                    <p id="rangeValue" class="range-display">01h 00m</p> <!-- Updated to show 00h 15m -->
-                </div>
-            </div>
+            <input type="range" min="0" max="730" step="1" value="15" class="duration" id="myRange">  <!--temp change to every 1min for testing-->
         </div>
 
-        <div class = "row">
-            <div class = "column-1">
+        <div class="row">
+            <div class="column-1">
                 <p>Choose your mode</p>
             </div>
-            <div class = "column-2">
-                <div class="radio">
+            <div class="column-2">
+                <div class="radio tooltip">
                     <input type="radio" id="light" name="fav_language" value="Light Hex">
-                    <label for="light">Light Hex</label>
+                    <label for="light">Mild Mischief</label>
+                    <span class="tooltiptext">
+                        Gentle reminders to keep you on track. 
+                        Demons are not all bad y’know; they believe in balance.
+                    </span>
                 </div>
-                <div class = "radio">
+                <div class="radio tooltip">
                     <input type="radio" id="demon" name="fav_language" value="Demon Mode">
-                    <label for="demon">Demon Mode</label>
+                    <label for="demon">Toll of Damnation</label>
+                    <span class="tooltiptext">
+                        Unleash the true powers of the demon. 
+                        *WARNING* this mode contains jumpscares.
+                    </span>
                 </div>
             </div>
         </div>
 
-
-        <div class = "row">
+        <div class="row">
             <div class="button">
                 <input class="click" type="submit" value="Summon Ze Demons For Me">
             </div>

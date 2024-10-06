@@ -130,3 +130,43 @@ function requestNotificationPermission() {
 
 // Call this function when your extension starts
 requestNotificationPermission();
+
+
+document.querySelectorAll('.tooltip').forEach(item => {
+    const tooltip = item.querySelector('.tooltiptext');
+
+    // Show the tooltip on mouse enter
+    item.addEventListener('mouseenter', () => {
+        tooltip.style.visibility = 'visible'; // Show tooltip
+        tooltip.style.opacity = '1'; // Set opacity to 1
+    });
+
+    // Hide the tooltip on mouse leave
+    item.addEventListener('mouseleave', () => {
+        tooltip.style.visibility = 'hidden'; // Hide tooltip
+        tooltip.style.opacity = '0'; // Set opacity to 0
+    });
+
+    // Follow the cursor
+    item.addEventListener('mousemove', event => {
+        const tooltipWidth = tooltip.offsetWidth; // Get tooltip width
+        const tooltipHeight = tooltip.offsetHeight; // Get tooltip height
+        
+        // Calculate position
+        let left = event.pageX + 10; // Default position slightly right
+        let top = event.pageY + 10; // Default position slightly down
+
+        // Adjust position if tooltip goes offscreen
+        if (left + tooltipWidth > window.innerWidth) {
+            left = event.pageX - tooltipWidth - 10; // Move to the left
+        }
+
+        if (top + tooltipHeight > window.innerHeight) {
+            top = event.pageY - tooltipHeight - 10; // Move above
+        }
+
+        // Set tooltip position
+        tooltip.style.left = left + 'px'; 
+        tooltip.style.top = top + 'px';
+    });
+});
