@@ -24,7 +24,6 @@ body {
   grid-template-columns: repeat(2, 1fr);
 }
 
-
 .button{
   display: grid;
   grid-template-columns: repeat(3, 1fr);

@@ -13,18 +13,21 @@
     <h1>Distraction Demon</h1>
 
     <!-- Rounded switch -->
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
-
-
-    <div class="volume">
-        <p>Time Duration</p>
-      
+    <div class="layout">
+        <p>Enable/ Disable</p>
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
     </div>
 
-    <div class="mode">
+
+    <div class="layout">
+        <p>Time Duration</p>
+        <input type="range" min="1" max="100" value="50" class="duration" id="myRange">
+    </div>
+
+    <div class="layout">
         <p>Curse Mode</p>
         <div class="button">
             <input class="click" type="submit" value="Easy" onclick="location.href='';">
