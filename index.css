@@ -46,8 +46,9 @@ body {
    Range Display
 ================================== */
 .range-display {
-    width: 3.5rem; /* Fixed width for time display */
+    /*width: 3.5rem;  Fixed width for time display */
     text-align: right; /* Align text to the right */
+    white-space: nowrap;
 }
 
 /* ==============================
@@ -75,6 +76,7 @@ body {
 ================================== */
 .column-1 {
     border: 2px solid lightgoldenrodyellow; /* Temporary border for troubleshooting */
+    white-space: nowrap;
 }
 
 .column-2 {
@@ -82,6 +84,7 @@ body {
     margin-left: auto; /* Push to the right */
     display: flex; /* Flexbox layout for alignment */
     align-items: center; /* Center items vertically within the column */
+    white-space: nowrap;
 }
 
 /* ==============================
@@ -98,6 +101,7 @@ body {
 .click {
     margin: 0.5rem; /* Spacing around buttons */
 }
+
 
 /* ==============================
    Rounded Switch Styles

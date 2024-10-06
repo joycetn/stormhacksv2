@@ -6,6 +6,7 @@
   <title>Distraction Demon</title>
   <link href="index.css" rel="stylesheet" type="text/css">
   <script src="toggle.js"></script>
+  <script src="slider.js"></script>
 
 </head>
 
@@ -19,7 +20,6 @@
                 <p>Enable/ Disable</p>
             </div>
             <div class="column-2">
-                
                 <label class="switch" >
                     <input type="checkbox" id="toggleDarkModeButton">
                     <span class="slider round"></span>
@@ -34,8 +34,8 @@
             </div>
             <div class="column-2">
                 <div class="slider-container">
-                    <input type="range" min="0" max="600" value="50" oninput="updateTimeDisplay(this.value)" class="duration" id="myRange">
-                    <p id="rangeValue" class="range-display">00:50</p> <!-- Start value displayed as 00:50 -->
+                    <input type="range" min="0" max="720" value="0" class="duration" id="myRange">
+                    <p id="rangeValue" class="range-display"></p> <!-- Start value displayed as 00:50 -->
                 </div>
             </div>
         </div>
@@ -46,10 +46,14 @@
                 <p>Curse Type</p>
             </div>
             <div class = "column-2">
-                <div class="button">
-                    <input class="click" type="submit" value="Light Hex" id="lightHexButton">
-                    <input class="click" type="submit" value="Demon Mode" id="demonModeButton">
-                </div> 
+                <div class="radio">
+                    <input type="radio" id="light" name="fav_language" value="Light Hex">
+                    <label for="light">Light Hex</label>
+                </div>
+                <div class = "radio">
+                    <input type="radio" id="demon" name="fav_language" value="Demon Mode">
+                    <label for="demon">Demon Mode</label>
+                </div>
             </div>
         </div>
 
