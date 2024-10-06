@@ -27,24 +27,21 @@
                 </label>
             </div> 
         </div>
-    </div>
 
 
-    <div class="parent-container">
         <div class="row">
-            <div class = "column-1">
+            <div class="column-1">
                 <p>Length of Curse</p>
             </div>
-            <div class = "column-2">
-                <input type="range" min="1" max="100" value="50" oninput="rangeValue.innerText = this.value" class="duration" id="myRange">
+            <div class="column-2">
+                <div class="slider-container">
+                    <input type="range" min="0" max="600" value="50" oninput="updateTimeDisplay(this.value)" class="duration" id="myRange">
+                    <p id="rangeValue" class="range-display">00:50</p> <!-- Start value displayed as 00:50 -->
+                </div>
             </div>
-            </div class = "column-3">
-                <p id="rangeValue">100</p> 
-            </div>  
         </div>
-    </div>
 
-    <div class="parent-container">
+
         <div class = "row">
             <div class = "column-1">
                 <p>Curse Type</p>
@@ -57,17 +54,14 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    
-    <div class="parent-container">
+
         <div class = "row">
-            <div class = "column-2">
-                <div class="button">
-                    <input class="click" type="submit" value="Summon Ze Demons For Me" onclick="location.href='';">
-                </div>
+            <div class="button">
+                <input class="click" type="submit" value="Summon Ze Demons For Me" onclick="location.href='';">
             </div>
         </div>
+
     </div>
 
 </body>

@@ -1,118 +1,170 @@
+/* ==============================
+   General Body Styles
+================================== */
 body {
     /*font-family: Impact, sans-serif; */
-    font-size: 1rem;
-    padding: 3rem;
-    color: #2c2c2c;  /* #white */
-    background-color: #aeaeae;  /* #light grey */
-    width: 20rem;
-    transition: background-color 1s ease, color 0.5s ease;
-  }
-
-  /*for switch toggle*/
-.dark-mode {
-  color: #aeaeae;  /* #light grey */
-  background-color: #2c2c2c;  /* #white */
+    font-size: 1rem; /* Base font size */
+    padding: 3rem; /* Padding around the body */
+    color: #2c2c2c;  /* Default text color */
+    background-color: #aeaeae;  /* Default background color (light grey) */
+    width: 20rem; /* Fixed width for the body */
+    transition: background-color 1s ease, color 0.5s ease; /* Smooth transitions for dark mode */
 }
 
+/* ==============================
+   Dark Mode Styles
+================================== */
+.dark-mode {
+    color: #aeaeae;  /* Light grey text in dark mode */
+    background-color: #2c2c2c;  /* Dark background in dark mode */
+}
+
+/* ==============================
+   Button Styles
+================================== */
 .enter {
-     /*font-family: Impact, sans-serif; */
-    font-size: 1rem;
-    padding: 0.5rem;
+    /*font-family: Impact, sans-serif; */
+    font-size: 1rem; /* Base font size for buttons */
+    padding: 0.5rem; /* Padding for buttons */
 }
 
 .enter:hover {
-    color: #4d4649; /* #dark grey */
-    background-color: #aeaeae;  /* #light grey */
-    transition-property: background-color, color;
-    transition-duration: 0.5s;
+    color: #4d4649; /* Dark grey on hover */
+    background-color: #aeaeae;  /* Light grey on hover */
+    transition-property: background-color, color; /* Transition effects for hover */
+    transition-duration: 0.5s; /* Duration of transition effects */
 }
 
-.parent-container{
-    border: 2px solid lightblue; /* /////////////////////delete later */
+/* ==============================
+   Parent Container
+================================== */
+.parent-container {
+    border: 2px solid lightblue; /* Temporary border for troubleshooting */
 }
 
-.row{
-  border: 2px solid darkblue; /* /////////////////////delete later */
-  margin: 1rem 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  align-items: center;
+/* ==============================
+   Range Display
+================================== */
+.range-display {
+    width: 3.5rem; /* Fixed width for time display */
+    text-align: right; /* Align text to the right */
 }
 
-.column-2{
-  border: 2px solid pink; /* /////////////////////delete later */
-  margin-left:auto;
+/* ==============================
+   Slider Container
+================================== */
+.slider-container {
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center items vertically within the container */
 }
 
-.button{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* ==============================
+   Row Styles
+================================== */
+.row {
+    border: 2px solid darkblue; /* Temporary border for troubleshooting */
+    margin: 1rem 0; /* Spacing between rows */
+    display: grid; /* Grid layout for rows */
+    grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    align-items: center; /* Center items vertically */
 }
 
-.click{
-  margin:0.5rem;
+/* ==============================
+   Column Styles
+================================== */
+.column-1 {
+    border: 2px solid lightgoldenrodyellow; /* Temporary border for troubleshooting */
 }
 
-/* rounded switch */
+.column-2 {
+    border: 2px solid pink; /* Temporary border for troubleshooting */
+    margin-left: auto; /* Push to the right */
+    display: flex; /* Flexbox layout for alignment */
+    align-items: center; /* Center items vertically within the column */
+}
+
+/* ==============================
+   Button Container Styles
+================================== */
+.button {
+    display: grid; /* Grid layout for buttons */
+    grid-template-columns: repeat(3, 1fr); /* Three-button layout */
+}
+
+/* ==============================
+   Button Styles
+================================== */
+.click {
+    margin: 0.5rem; /* Spacing around buttons */
+}
+
+/* ==============================
+   Rounded Switch Styles
+================================== */
 .switch {
-  position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+    position: relative; /* Relative positioning for the switch */
+    display: inline-block; /* Inline-block for layout */
+    width: 60px; /* Width of the switch */
+    height: 34px; /* Height of the switch */
 }
 
-/* Hide default HTML checkbox */
+/* ==============================
+   Hide Default HTML Checkbox
+================================== */
 .switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+    opacity: 0; /* Hide checkbox */
+    width: 0; /* No width */
+    height: 0; /* No height */
 }
 
-/* The slider */
+/* ==============================
+   Slider Styles
+================================== */
 .slider {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #ccc;
-  -webkit-transition: .4s;
-  transition: .4s;
+    position: absolute; /* Absolute positioning for the slider */
+    cursor: pointer; /* Pointer cursor on hover */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    right: 0; /* Align to the right */
+    bottom: 0; /* Align to the bottom */
+    background-color: #ccc; /* Default background color of the slider */
+    transition: .4s; /* Smooth transition for background color */
 }
 
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 26px;
-  width: 26px;
-  left: 4px;
-  bottom: 4px;
-  background-color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
+    position: absolute; /* Absolute positioning for the slider circle */
+    content: ""; /* Empty content for the circle */
+    height: 26px; /* Height of the circle */
+    width: 26px; /* Width of the circle */
+    left: 4px; /* Left offset */
+    bottom: 4px; /* Bottom offset */
+    background-color: white; /* Circle color */
+    transition: .4s; /* Smooth transition for the circle */
 }
 
+/* ==============================
+   Checked State for Slider
+================================== */
 input:checked + .slider {
-  background-color: #2196F3;
+    background-color: #2196F3; /* Background color when checked */
 }
 
 input:focus + .slider {
-  box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #2196F3; /* Focus effect */
 }
 
 input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(26px);
+    transform: translateX(26px); /* Move circle when checked */
 }
 
-/* Rounded sliders */
+/* ==============================
+   Rounded Sliders
+================================== */
 .slider.round {
-  border-radius: 34px;
+    border-radius: 34px; /* Round edges for the switch */
 }
 
 .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%; /* Round edges for the slider circle */
 }
-/* end of rounded switch switch */
+
