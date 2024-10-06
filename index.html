@@ -36,8 +36,11 @@
                 <p>Length of Curse</p>
             </div>
             <div class = "column-2">
-                <input type="range" min="1" max="100" value="50" class="duration" id="myRange">
+                <input type="range" min="1" max="100" value="50" oninput="rangeValue.innerText = this.value" class="duration" id="myRange">
             </div>
+            </div class = "column-3">
+                <p id="rangeValue">100</p> 
+            </div>  
         </div>
     </div>
 
