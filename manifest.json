@@ -1,17 +1,29 @@
 {
-    "manifest_version": 3,
-    "name": "Distraction Demon",
-    "description": "A chrome extension that scares the shit out of you occasionally in order to make sure you are on task.",
-    "version": "1.0",
-    "action": {
+  "manifest_version": 3,
+  "name": "Distraction Demon",
+  "version": "1.0",
+  "description": "A chrome extension that scares the shit out of you occasionally in order to make sure you are on task.",
+  "action": {
       "default_popup": "index.html",
       "default_icon": "distraction_demon.png"
-    },
-    "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["toggle.js"]
-    }
-  ]
+  },
+  "content_scripts": [
+      {
+          "matches": ["<all_urls>"],
+          "js": ["toggle.js"]
+      }
+  ],
+  "web_accessible_resources": [
+      {
+          "resources": ["distraction_demon.png"],
+          "matches": ["<all_urls>"]
+      }
+  ],
+  "permissions": ["storage"],
+  "background": {
+      "service_worker": "background.js"
+  },
+  "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
   }
-  
+}
