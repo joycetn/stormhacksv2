@@ -80,6 +80,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 //===========================================================================================================
 // Function to start the jumpscare sequence at random intervals
+// let isPopupOpen = false; // Flag to track if the pop-up is open
+
 function startJumpscareSequence(totalDuration) {
     const numberOfJumpscares = getRandomInt(3, 6); // Choose between 3 to 6 jumpscares
     const interval = totalDuration / numberOfJumpscares; // Divide total time into random intervals
@@ -92,21 +94,43 @@ function startJumpscareSequence(totalDuration) {
 
 // Function to trigger a jumpscare (show the image)
 function triggerJumpscare() {
+     // Check if the pop-up is already open
+    //  if (isPopupOpen) {
+    //     return; // Exit the function if the pop-up is open
+    // }
+    
+    // isPopupOpen = true; // Set the flag to indicate the pop-up is open                                                                                      
+
+    //==============
+
+    // Get the selected mode
+    const selectedMode = document.querySelector('input[name="fav_language"]:checked');
+    
+    // Determine which mode is selected
+    let mode = "";
+    if (selectedMode) {
+        mode = selectedMode.value; // Get the value of the selected radio button
+    }
+
      // Open the popup.html as a new window
     const popupWidth = 600;  // Set the desired width of the pop-up
     const popupHeight = 400;  // Set the desired height of the pop-up
     const left = (screen.width / 2) - (popupWidth / 2); // Center the pop-up horizontally
     const top = (screen.height / 2) - (popupHeight / 2); // Center the pop-up vertically
 
-    const popupWindow = window.open(chrome.runtime.getURL("popup.html"), "Distraction Demon", 
+    const popupWindow = window.open(chrome.runtime.getURL(`popup.html?mode=${mode}`), "Distraction Demon", 
         `width=${popupWidth},height=${popupHeight},top=${top},left=${left},resizable=no,menubar=no,toolbar=no,status=no`);
 
+    // Close the flag when the window is closed
+    // popupWindow.onunload = function() {
+    //     isPopupOpen = false; // Reset the flag when the pop-up is closed
+    // };
     // Optional: Automatically close the popup after 5 seconds
-    setTimeout(() => {
-        if (popupWindow) {
-            popupWindow.close();
-        }
-    }, 50000); // Pop-up appears for 5 seconds
+    // setTimeout(() => {
+    //     if (popupWindow) {
+    //         popupWindow.close();
+    //     }
+    // }, 50000); // Pop-up appears for 5 seconds
 }
 //===========================================================================================================
 
