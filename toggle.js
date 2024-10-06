@@ -155,7 +155,8 @@ function requestNotificationPermission() {
 // Call this function when your extension starts
 requestNotificationPermission();
 
-
+//===========================================================================================================
+// Function for tooltip to follow mouse (DOESNT WORK)
 document.querySelectorAll('.tooltip').forEach(item => {
     const tooltip = item.querySelector('.tooltiptext');
 
@@ -192,5 +193,43 @@ document.querySelectorAll('.tooltip').forEach(item => {
         // Set tooltip position
         tooltip.style.left = left + 'px'; 
         tooltip.style.top = top + 'px';
+    });
+});
+
+//===========================================================================================================
+// Function for 'summon the demon' button to be inactive/active based on conditions
+document.addEventListener('DOMContentLoaded', function() {
+    const rangeInput = document.getElementById('myRange');
+    const summonButton = document.querySelector('.click');
+
+    // Function to update button state
+    function updateButtonState() {
+        const isRadioChecked = document.querySelector('input[name="fav_language"]:checked') !== null; // Check if any radio button is selected
+        const isRangeSet = rangeInput.value > 0; // Check if the range input is set to a value greater than 0
+
+        if (isRadioChecked && isRangeSet) {
+            summonButton.classList.remove('inactive'); // Remove inactive class
+        } else {
+            summonButton.classList.add('inactive'); // Add inactive class
+        }
+    }
+
+    // Event listener for the range input
+    rangeInput.addEventListener('input', function() {
+        updateTimeDisplay(this.value);
+        updateButtonState(); // Update button state when the range input changes
+    });
+
+    // Event listeners for the radio buttons
+    document.querySelectorAll('input[name="fav_language"]').forEach(radio => {
+        radio.addEventListener('change', updateButtonState); // Update button state when a radio button changes
+    });
+
+    // Initial button state check
+    updateButtonState();
+
+    summonButton.addEventListener('click', function() {
+        const totalDuration = rangeInput.value * 60 * 1000; // Convert minutes to milliseconds
+        startJumpscareSequence(totalDuration); // Start jumpscare sequence
     });
 });
