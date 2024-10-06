@@ -46,17 +46,19 @@ body {
    Range Display
 ================================== */
 .range-display {
-    /*width: 3.5rem;  Fixed width for time display */
+    width: auto; /* Adjust width to fit content */
     text-align: right; /* Align text to the right */
-    white-space: nowrap;
+    white-space: nowrap; /* Prevent line breaks */
+    margin-left: 10px; /* Add some space between the slider and the text */
 }
 
 /* ==============================
    Slider Container
 ================================== */
 .slider-container {
-    display: flex; /* Flexbox layout for alignment */
-    align-items: center; /* Center items vertically within the container */
+    display: flex; /* Use flexbox to keep the slider and text on one line */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Adjust spacing between slider and text */
 }
 
 
