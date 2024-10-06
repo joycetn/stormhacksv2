@@ -181,20 +181,6 @@ input[type="range"]::-webkit-slider-thumb {
     white-space: nowrap;
 }
 
-/* ==============================
-   Button Container Styles
-================================== */
-.button {
-    display: grid; /* Grid layout for buttons */
-    grid-template-columns: repeat(3, 1fr); /* Three-button layout */
-}
-
-/* ==============================
-   Button Styles
-================================== */
-.click {
-    margin: 0.5rem; /* Spacing around buttons */
-}
 
 
 /* ==============================
@@ -317,6 +303,19 @@ input:checked + .slider:before {
 /* ==============================
    Button (Summon the demon))
 ================================== */
+
+
+/* ==============================
+   Button Container Styles
+================================== */
+
+.button {
+    display: block; /* Grid layout for buttons */
+    align-content: center;
+    /* grid-template-columns: repeat(3, 1fr); Three-button layout */
+    width: 100%;
+}
+
 
 .click {
     background-color: transparent;
