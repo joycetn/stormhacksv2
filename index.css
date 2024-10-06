@@ -37,7 +37,28 @@ body {
 h1 {
     font-family: 'Major Mono Display'; /* Stylized font */
     text-align: center;
+    color: #E8E8E8;
 }
+
+/* ==============================
+   Paragraph Styling
+================================== */
+p {
+    font-family: 'Inter'; /* Most basic font */
+    color: #9F9F9F;
+    line-height: 1.5;
+}
+
+/* ==============================
+   Subtitle Styling
+================================== */
+.subtitle {
+    font-family: 'Inter'; /* Most basic font */
+    text-align: center;
+    color: #515157;
+    font-size: 0.8rem;
+}
+
 
 /* ==============================
    Dark Mode Styles
