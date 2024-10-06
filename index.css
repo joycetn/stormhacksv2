@@ -20,10 +20,17 @@ body {
     transition-duration: 0.5s;
 }
 
-.layout{
+.parent-container{
+}
+
+.row{
   margin-top: 2rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+
+.column-2{
+
 }
 
 .button{
