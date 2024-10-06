@@ -61,3 +61,38 @@ function startCountdown() {
         }
     }, 60000); // Update every 1 minute (60000 milliseconds)
 }
+
+// timer.js
+document.addEventListener('DOMContentLoaded', function () {
+    const countdownValue = localStorage.getItem('countdownValue'); // Get the countdown value from localStorage
+    const timerDisplay = document.getElementById('countdownTimer'); // Get the timer display element
+
+    if (countdownValue) {
+        // Convert the value to seconds (assuming it's in minutes) and add an extra minute (60 seconds)
+        let totalTime = (countdownValue * 60) + 59; // Convert minutes to seconds and add 1 extra minute
+
+        // Display the time immediately on load
+        updateTimerDisplay(totalTime);
+
+        // Start the countdown
+        const countdownInterval = setInterval(() => {
+            if (totalTime > 0) {
+                totalTime -= 1; // Decrease time by 1 second
+
+                updateTimerDisplay(totalTime); // Update the display
+            } else {
+                clearInterval(countdownInterval); // Stop the timer when it hits 0
+                timerDisplay.innerText = 'Session Ended!';
+            }
+        }, 1000); // Update every second
+    } else {
+        timerDisplay.innerText = 'No time set!';
+    }
+
+    // Function to format and update the timer display
+    function updateTimerDisplay(timeInSeconds) {
+        const hours = Math.floor(timeInSeconds / 3600); // Calculate total hours
+        const minutes = Math.floor((timeInSeconds % 3600) / 60); // Calculate remaining minutes
+        timerDisplay.innerText = `${String(hours).padStart(2, '0')}h ${String(minutes).padStart(2, '0')}m`; // Display formatted time
+    }
+});
