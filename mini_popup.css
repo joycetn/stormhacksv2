@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 0.8em;
+    background-color: #1B1B23;
+}
+
+.popup {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border: 2px solid rgb(95, 95, 206); /* Temporary border for troubleshooting */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 250px;
+    height: 125px;
+    border-radius: 8px;
+    background-color: #1B1B23;
+}
+
+.row {
+    display: flex;
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    width: 100%;
+}
+
+#popupLogo {
+    width: 100px; /* Adjust size of the logo */
+    height: 100px; /* Adjust size of the logo */
+    margin-right: 10px; /* Space between the logo and the timer */
+}
+
+.range-display {
+    white-space: nowrap;
+    color: #E8E8E8;
+    font-size: 1.5em; /* Make the countdown timer text larger */
+    margin: 0; /* Remove any margin */
+}
+
+.pause-text {
+    color: #949494; /* Different color (e.g., coral) */
+    font-size: 0.7em; /* Make it smaller */
+    margin-top: auto; /* Add a bit of space from the previous element */
+    cursor: pointer;
+}
