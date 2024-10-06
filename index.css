@@ -28,15 +28,19 @@ body {
 }
 
 .parent-container{
+    border: 2px solid lightblue; /* /////////////////////delete later */
 }
 
 .row{
-  margin-top: 2rem;
+  border: 2px solid darkblue; /* /////////////////////delete later */
+  margin: 1rem 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }
 
 .column-2{
+  border: 2px solid pink; /* /////////////////////delete later */
   margin-left:auto;
 }
 
