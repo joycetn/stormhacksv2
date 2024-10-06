@@ -2,14 +2,66 @@
    General Body Styles
 ================================== */
 body {
-    /*font-family: Impact, sans-serif; */
-    font-size: 1rem; /* Base font size */
-    padding: 3rem; /* Padding around the body */
-    color: #2c2c2c;  /* Default text color */
-    background-color: #aeaeae;  /* Default background color (light grey) */
-    width: 20rem; /* Fixed width for the body */
+    display: flex; /* Enable flexbox */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center elements horizontally */
+    justify-content: center; /* Center elements vertically */
+    margin: 0; /* Remove default margin */
+    font-family: 'Inter'; /* Most basic font */
+    font-size: 0.8em; /* Base font size */
+    padding: 40px 40px; /* Padding around the body */
+    color: #E8E8E8;  /* Default text color */
+    background-color: #1B1B23;  /* Default background color (light grey) */
+    width: 350px; /* Fixed width for the body */
     transition: background-color 1s ease, color 0.5s ease; /* Smooth transitions for dark mode */
+    border: 2px solid pink; /* Temporary border for troubleshooting */
 }
+
+/* ==============================
+   Demon logo/button
+================================== */
+/* Transition for the logo image */
+#logoImage {
+    transition: opacity 3s ease, transform 1s ease; /* Smooth transition */
+    opacity: 0.7; /* Default opacity for inactive state */
+}
+
+/* Class for the active state */
+#logoImage.active {
+    opacity: 1; /* Full opacity for active state */
+    transform: scale(1.05); /* Slightly scale up for a glow effect */
+}
+
+/* ==============================
+   Header Styling
+================================== */
+h1 {
+    font-family: 'Major Mono Display'; /* Stylized font */
+    text-align: center;
+    /* border: 2px solid rgb(83, 145, 103); /* Temporary border for troubleshooting */
+    letter-spacing: 1.4px; /* Adjust the value as needed */
+    color: #E8E8E8;
+}
+
+/* ==============================
+   Paragraph Styling
+================================== */
+p {
+    font-family: 'Inter'; /* Most basic font */
+    color: #9F9F9F;
+    line-height: 1.5;
+}
+
+/* ==============================
+   Subtitle Styling
+================================== */
+.subtitle {
+    font-family: 'Inter'; /* Most basic font */
+    text-align: center;
+    color: #515157;
+    font-size: 0.8rem;
+}
+
 
 /* ==============================
    Dark Mode Styles
@@ -46,7 +98,7 @@ body {
    Range Display
 ================================== */
 .range-display {
-    width: 3.5rem; /* Adjust width to fit content */
+    width: auto; /* Adjust width to fit content */
     text-align: right; /* Align text to the right */
     white-space: nowrap; /* Prevent line breaks */
     margin-left: 10px; /* Add some space between the slider and the text */
@@ -55,10 +107,39 @@ body {
 /* ==============================
    Slider Container
 ================================== */
+.slider-header {
+    display: flex; /* Use flexbox to place items side by side */
+    justify-content: space-between; /* Space out the text and the timer */
+    align-items: center; /* Align vertically */
+}
+
 .slider-container {
-    display: flex; /* Use flexbox to keep the slider and text on one line */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Adjust spacing between slider and text */
+    display: flex; /* Use flexbox to center the slider */
+    justify-content: center; /* Center the slider horizontally */
+    width: 100%; /* Full width of the parent container */
+    margin: 0 auto; /* Ensure the slider is centered */
+}
+
+input[type="range"] {
+    width: 100%; /* Set slider width to 100% of the parent (which is 350px in this case) */
+    max-width: 350px; /* Ensure the slider doesn't exceed the width of the blue box */
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    height: 5px; /* Thinner line */
+    background: #5D5D5D; /* Background color */
+    outline: none; /* Remove outline */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* slider button */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none; /* Remove default styling */
+    width: 15px; /* Thumb width */
+    height: 15px; /* Thumb height */
+    background: #D96B6B; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer; /* Pointer cursor */
+    
 }
 
 
@@ -66,7 +147,7 @@ body {
    Row Styles
 ================================== */
 .row {
-    border: 2px solid darkblue; /* Temporary border for troubleshooting */
+    border: 2px solid rgb(95, 95, 206); /* Temporary border for troubleshooting */
     margin: 1rem 0; /* Spacing between rows */
     display: grid; /* Grid layout for rows */
     grid-template-columns: repeat(2, 1fr); /* Two-column layout */

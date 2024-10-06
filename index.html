@@ -5,32 +5,31 @@
   <meta charset="utf-8">
   <title>Distraction Demon</title>
   <link href="index.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Major Mono Display" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inter" rel="stylesheet">
   <script src="toggle.js"></script>
   <script src="slider.js"></script>
 
 </head>
 
 <body>
+
+    <a href="#" id="logoLink">
+        <img id="logoImage" src="Logo/logo_inactive.png" alt="Distraction Demon Logo">
+    </a>
+
     <h1>Distraction Demon</h1>
+    <p>Lost soul... do you find yourself wandering off into the abyss 
+        of the internet when you should be working? Fear not... make a 
+        pact with me to summon your focus back...</p>
 
     <!-- Rounded switch -->
     <div class="parent-container" >
-        <div class = "row">
-            <div class = "column-1">
-                <p>Enable/ Disable</p>
-            </div>
-            <div class="column-2">
-                <label class="switch">
-                    <input type="checkbox" id="toggleDarkModeButton">
-                    <span class="slider round"></span>
-                </label>
-            </div> 
-        </div>
 
-
-        <div class="row">
-            <div class="column-1">
+        <div class="column">
+            <div class="slider-header">
                 <p>Length of Curse</p>
+                <p id="rangeValue" class="range-display">01h 00m</p> <!-- Display time on the same line -->
             </div>
             <div class="column-2">
                 <div class="slider-container">
@@ -40,10 +39,9 @@
             </div>
         </div>
 
-
         <div class = "row">
             <div class = "column-1">
-                <p>Curse Type</p>
+                <p>Choose your mode</p>
             </div>
             <div class = "column-2">
                 <div class="radio">
