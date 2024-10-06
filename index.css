@@ -107,10 +107,39 @@ p {
 /* ==============================
    Slider Container
 ================================== */
+.slider-header {
+    display: flex; /* Use flexbox to place items side by side */
+    justify-content: space-between; /* Space out the text and the timer */
+    align-items: center; /* Align vertically */
+}
+
 .slider-container {
-    display: flex; /* Use flexbox to keep the slider and text on one line */
-    align-items: center; /* Center items vertically */
-    justify-content: space-between; /* Adjust spacing between slider and text */
+    display: flex; /* Use flexbox to center the slider */
+    justify-content: center; /* Center the slider horizontally */
+    width: 100%; /* Full width of the parent container */
+    margin: 0 auto; /* Ensure the slider is centered */
+}
+
+input[type="range"] {
+    width: 100%; /* Set slider width to 100% of the parent (which is 350px in this case) */
+    max-width: 350px; /* Ensure the slider doesn't exceed the width of the blue box */
+    -webkit-appearance: none; /* Remove default styling */
+    appearance: none; /* Remove default styling */
+    height: 5px; /* Thinner line */
+    background: #5D5D5D; /* Background color */
+    outline: none; /* Remove outline */
+    border-radius: 5px; /* Rounded edges */
+}
+
+/* slider button */
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none; /* Remove default styling */
+    width: 15px; /* Thumb width */
+    height: 15px; /* Thumb height */
+    background: #D96B6B; /* Thumb color */
+    border-radius: 50%;
+    cursor: pointer; /* Pointer cursor */
+    
 }
 
 

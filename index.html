@@ -25,18 +25,16 @@
 
     <!-- Rounded switch -->
     <div class="parent-container" >
-        <div class="row">
-            <div class="column-1">
+
+        <div class="column">
+            <div class="slider-header">
                 <p>Length of Curse</p>
+                <p id="rangeValue" class="range-display">01h 00m</p> <!-- Display time on the same line -->
             </div>
-            <div class="column-2">
-                <div class="slider-container">
-                    <input type="range" min="0" max="730" step="15" value="15" class="duration" id="myRange">
-                    <p id="rangeValue" class="range-display">01h 00m</p> <!-- Updated to show 00h 15m -->
-                </div>
+            <div class="slider-container">
+                <input type="range" min="0" max="730" step="15" value="15" class="duration" id="myRange">
             </div>
         </div>
-
 
         <div class = "row">
             <div class = "column-1">
