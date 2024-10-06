@@ -5,8 +5,6 @@
   <meta charset="utf-8">
   <title>Distraction Demon</title>
   <link href="index.css" rel="stylesheet" type="text/css">
-  <!-- reference: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="toggle.js"></script>
 
 </head>
@@ -21,6 +19,7 @@
                 <p>Enable/ Disable</p>
             </div>
             <div class="column-2">
+                <input class="click" type="button" value="Toggle Dark Mode" id="toggleDarkModeButton">
                 <label class="switch" >
                     <input type="checkbox" onclick="switchMode()">
                     <span class="slider round"></span>
@@ -48,10 +47,9 @@
             </div>
             <div class = "column-2">
                 <div class="button">
-                    <input class="click" type="submit" value="Light Hex" onclick="location.href='';">
-                    <!-- <input class="click" type="submit" value="Medium" onclick="location.href='';"> -->
-                    <input class="click" type="submit" value="Demon Mode" onclick="location.href='';">
-                </div>
+                    <input class="click" type="submit" value="Light Hex" id="lightHexButton">
+                    <input class="click" type="submit" value="Demon Mode" id="demonModeButton">
+                </div> 
             </div>
         </div>
 
