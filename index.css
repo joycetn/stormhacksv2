@@ -14,7 +14,7 @@ body {
     background-color: #1B1B23;  /* Default background color (light grey) */
     width: 350px; /* Fixed width for the body */
     transition: background-color 1s ease, color 0.5s ease; /* Smooth transitions for dark mode */
-    border: 2px solid pink; /* Temporary border for troubleshooting */
+    /*border: 2px solid pink; Temporary border for troubleshooting */
 }
 
 /* ==============================
@@ -101,7 +101,7 @@ p {
    Parent Container
 ================================== */
 .parent-container {
-    border: 2px solid lightblue; /* Temporary border for troubleshooting */
+   /* border: 2px solid lightblue; Temporary border for troubleshooting */
 }
 
 /* ==============================
@@ -157,7 +157,7 @@ input[type="range"]::-webkit-slider-thumb {
    Row Styles
 ================================== */
 .row {
-    border: 2px solid rgb(95, 95, 206); /* Temporary border for troubleshooting */
+    /* border: 2px solid rgb(95, 95, 206); Temporary border for troubleshooting */
     margin: 1rem 0; /* Spacing between rows */
     display: grid; /* Grid layout for rows */
     grid-template-columns: repeat(2, 1fr); /* Two-column layout */
@@ -169,7 +169,7 @@ input[type="range"]::-webkit-slider-thumb {
    Column Styles
 ================================== */
 .column-1 {
-    border: 2px solid lightgoldenrodyellow; /* Temporary border for troubleshooting */
+    /* border: 2px solid lightgoldenrodyellow; Temporary border for troubleshooting */
     white-space: nowrap;
 }
 
