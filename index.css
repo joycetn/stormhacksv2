@@ -306,15 +306,14 @@ input:checked + .slider:before {
     opacity: 1;
 }
 
-<<<<<<< Updated upstream
 
 /* ==============================
    Radio Buttons and Stuff
 ================================== */
 
 .radio-label {
-    font-size: 1.1rem;
-=======
+    font-size: 0.9rem;
+}
 /* ==============================
    Button (Summon the demon))
 ================================== */
@@ -341,5 +340,4 @@ input:checked + .slider:before {
     color: #424242; /* Dim the text color */
     border: 2px solid #424242; /* Dim the border color */
     pointer-events: none; /* Prevent clicking */
->>>>>>> Stashed changes
 }
