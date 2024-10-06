@@ -22,10 +22,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function updateTimeDisplay(value) {
     let hours = Math.floor(value / 60);  // Get the hours
     let minutes = value % 60;  // Get the remaining minutes
-    let formattedTime = String(hours).padStart(2, '0') + ':' + String(minutes).padStart(2, '0');
+    let formattedTime = String(hours).padStart(2, '0') + 'h ' + String(minutes).padStart(2, '0') + 'm';
     document.getElementById('rangeValue').innerText = formattedTime;
 }
-
 // Function for switching modes
 function switchMode() {
     var element = document.body;
