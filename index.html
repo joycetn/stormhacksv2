@@ -7,20 +7,21 @@
   <link href="index.css" rel="stylesheet" type="text/css">
   <!-- reference: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="toggle.js"></script>
+
 </head>
 
 <body>
     <h1>Distraction Demon</h1>
 
-    <!-- Rounded switch -->
+    <!-- Rounded switch: when enabled/disabled changes colour -->
     <div class="layout">
-        <p>Enable/ Disable</p>
+        <p>Enable / Disable</p>
         <label class="switch">
-            <input type="checkbox">
+            <input type="checkbox" onclick="switchMode()">
             <span class="slider round"></span>
         </label>
     </div>
-
 
     <div class="layout">
         <p>Time Duration</p>
