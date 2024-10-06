@@ -14,26 +14,45 @@
 <body>
     <h1>Distraction Demon</h1>
 
-    <!-- Rounded switch: when enabled/disabled changes colour -->
-    <div class="layout">
-        <p>Enable / Disable</p>
-        <label class="switch">
-            <input type="checkbox" onclick="switchMode()">
-            <span class="slider round"></span>
-        </label>
+    <!-- Rounded switch -->
+    <div class="parent-container" >
+        <div class = "row">
+            <div class = "column-1">
+                <p>Enable/ Disable</p>
+            </div>
+            <div class="column-2">
+                <label class="switch" >
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
     </div>
 
-    <div class="layout">
-        <p>Time Duration</p>
-        <input type="range" min="1" max="100" value="50" class="duration" id="myRange">
+
+    <div class="parent-container">
+        <div class="row">
+            <div class = "column-1">
+                <p>Time Duration</p>
+            </div>
+            <div class = "column-2">
+                <input type="range" min="1" max="100" value="50" class="duration" id="myRange">
+            </div>
+        </div>
     </div>
 
-    <div class="layout">
-        <p>Curse Mode</p>
-        <div class="button">
-            <input class="click" type="submit" value="Easy" onclick="location.href='';">
-            <input class="click" type="submit" value="Medium" onclick="location.href='';">
-            <input class="click" type="submit" value="Hard" onclick="location.href='';">
+    <div class="parent-container">
+        <div class = "row">
+            <div class = "column-1">
+                <p>Curse Mode</p>
+            </div>
+            <div class = "column-2">
+                <div class="button">
+                    <input class="click" type="submit" value="Easy" onclick="location.href='';">
+                    <input class="click" type="submit" value="Medium" onclick="location.href='';">
+                    <input class="click" type="submit" value="Hard" onclick="location.href='';">
+                </div>
+            </div>
         </div>
     </div>
 
