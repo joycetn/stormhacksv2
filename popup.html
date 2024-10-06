@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distraction Demon</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;  /* Adjust width as needed */
+            height: 60vh; /* Adjust height as needed */
+            margin: 0;
+            background-color: black;
+            border: 2px solid black; /* Optional: Border for the pop-up */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Optional: Shadow for depth */
+        }
+        img {
+            width: 50%; /* Image takes the full width of the pop-up */
+            height: auto; /* Maintain aspect ratio of the image */
+
+        }
+        button {
+            margin-top: 20px; /* Space between the image and the button */
+            padding: 10px 20px; /* Padding for the button */
+            font-size: 16px; /* Font size */
+            cursor: pointer; /* Cursor changes to pointer on hover */
+            border: 2px solid white;
+            color: white;
+            background-color: black;
+        }
+
+        button:hover{
+            border: 2px solid red;
+            color: red;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <img id="jumpImage" src="" alt="Distraction Demon">
+    <button id="closeButton"></button> <!-- Close button -->
+    <script src="popup.js"></script>
+</body>
+</html>

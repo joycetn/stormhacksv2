@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.getElementById('myRange');
     const output = document.getElementById('rangeValue');
+    const summonButton = document.querySelector('.click');
 
     // default slider value
     updateTimeDisplay(slider.value);
@@ -8,6 +9,12 @@ document.addEventListener('DOMContentLoaded', function () {
     // Event listener for the input change on the slider
     slider.addEventListener('input', function () {
         updateTimeDisplay(slider.value);
+    });
+
+    // When the "Summon Ze Demons For Me" button is clicked, start the jumpscare sequence
+    summonButton.addEventListener('click', function () {
+        const totalDuration = slider.value * 60 * 1000; // Convert minutes to milliseconds
+        startJumpscareSequence(totalDuration);
     });
 });
 
