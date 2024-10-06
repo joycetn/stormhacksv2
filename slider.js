@@ -17,7 +17,8 @@ function updateTimeDisplay(value) {
     let minutes = value % 60; // Calculate remaining minutes
 
     // Format the time display
-    let formattedTime = `${hours}h ${minutes}m`;
+    let formattedTime = `${hours}h ${String(minutes).padStart(2, '0')}m`;
+
 
     // Update the time
     document.getElementById('rangeValue').innerText = formattedTime;
